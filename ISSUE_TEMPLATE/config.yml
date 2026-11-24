@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and help (Discord) / 질문과 도움
+    url: https://discord.gg/2fu36fUzdE
+    about: Ask usage questions and get help from the community. 사용 질문은 Discord에서 받을 수 있어요.
+  - name: Security vulnerability / 보안 취약점
+    url: https://github.com/ivLis-Studio/.github/blob/main/SECURITY.md
+    about: Report privately instead of opening a public issue. 공개 이슈 대신 비공개로 알려 주세요.
+  - name: Installation and troubleshooting guide / 설치·문제 해결 안내
+    url: https://github.com/ivLis-Studio/ivLyrics/blob/main/README_EN.md
+    about: Check the guide before reporting. 신고 전에 안내를 확인해 주세요.

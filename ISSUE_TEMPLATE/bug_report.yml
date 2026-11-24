@@ -1,0 +1,89 @@
+name: Bug report / 버그 신고
+description: Report something that does not work in ivLyrics. ivLyrics의 문제를 신고합니다.
+title: "[BUG] "
+labels: ["Bug Report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please search [existing issues](https://github.com/ivLis-Studio/ivLyrics/issues?q=is%3Aissue) first, and remove API keys, tokens, and cookie files from anything you attach. Security problems belong in the [security policy](https://github.com/ivLis-Studio/.github/blob/main/SECURITY.md), not here.
+
+        신고 감사합니다. 먼저 기존 이슈를 검색해 주세요. 첨부하는 로그·캡처에서 API 키, 토큰, 쿠키 파일은 꼭 지워 주세요. 보안 문제는 이슈 대신 보안 정책을 따라 주세요.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform / 플랫폼
+      options:
+        - PC (Spicetify)
+        - Android app
+        - Android LSPatch module
+        - iOS app
+        - ivLyrics Overlay
+        - ivLyrics Helper
+        - Server or website (ivl.is) / 서버·웹사이트
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ivLyrics version / ivLyrics 버전
+      description: Shown in ivLyrics settings. For PC, also include the Spotify and Spicetify versions. / 설정에서 확인할 수 있어요. PC는 Spotify·Spicetify 버전도 적어 주세요.
+      placeholder: "7.1.17 (Spotify 1.2.x, Spicetify 2.x)"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: OS and device / 운영체제·기기
+      placeholder: "Windows 11 / macOS 15 / Android 16 (Galaxy S25) / iOS 26 (iPhone 17)"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened? / 어떤 문제가 있나요?
+      description: Describe the problem and any error message. / 문제와 오류 메시지를 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 재현 순서
+      placeholder: |
+        1. Play ...
+        2. Open ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior / 기대한 동작
+    validations:
+      required: true
+  - type: input
+    id: song
+    attributes:
+      label: Song link / 곡 링크
+      description: A Spotify link helps with lyrics, sync, and video problems. / 가사·싱크·영상 문제라면 Spotify 링크를 붙여 주세요.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / 로그
+      description: Console or app logs, with keys and tokens removed. / 키와 토큰을 지운 콘솔·앱 로그
+      render: text
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots or video / 스크린샷·영상
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting / 제출 전 확인
+      options:
+        - label: I searched existing issues and the Discord bug-report channel. / 기존 이슈와 Discord 버그 리포트를 확인했습니다.
+          required: true
+        - label: I am using the latest version from an official channel. / 공식 채널의 최신 버전을 사용 중입니다.
+          required: true
+        - label: I removed API keys, tokens, and cookies from what I attached. / 첨부에서 API 키·토큰·쿠키를 지웠습니다.
+          required: true
